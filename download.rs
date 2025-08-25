@@ -25,14 +25,14 @@ fn get_highs_binary_url() -> String {
     let binary_name = match target.as_str() {
         "x86_64-apple-darwin" => "HiGHS.v1.11.0.x86_64-apple-darwin.tar.gz",
         "aarch64-apple-darwin" => "HiGHS.v1.11.0.aarch64-apple-darwin.tar.gz",
-        "x86_64-unknown-linux-gnu" => "HiGHS.v1.11.0.x86_64-linux-gnu.tar.gz",
-        "x86_64-unknown-linux-musl" => "HiGHS.v1.11.0.x86_64-linux-musl.tar.gz",
-        "aarch64-unknown-linux-gnu" => "HiGHS.v1.11.0.aarch64-linux-gnu.tar.gz",
-        "aarch64-unknown-linux-musl" => "HiGHS.v1.11.0.aarch64-linux-musl.tar.gz",
-        "x86_64-pc-windows-msvc" | "x86_64-pc-windows-gnu" => "HiGHS.v1.11.0.x86_64-w64-mingw32.tar.gz",
-        "i686-pc-windows-msvc" | "i686-pc-windows-gnu" => "HiGHS.v1.11.0.i686-w64-mingw32.tar.gz",
-        "armv7-unknown-linux-gnueabihf" => "HiGHS.v1.11.0.armv7l-linux-gnueabihf.tar.gz",
-        "arm-unknown-linux-gnueabihf" => "HiGHS.v1.11.0.armv6l-linux-gnueabihf.tar.gz",
+        "x86_64-unknown-linux-gnu" => "HiGHS.v1.11.0.x86_64-linux-gnu-cxx11.tar.gz",
+        "x86_64-unknown-linux-musl" => "HiGHS.v1.11.0.x86_64-linux-musl-cxx11.tar.gz",
+        "aarch64-unknown-linux-gnu" => "HiGHS.v1.11.0.aarch64-linux-gnu-cxx11.tar.gz",
+        "aarch64-unknown-linux-musl" => "HiGHS.v1.11.0.aarch64-linux-musl-cxx11.tar.gz",
+        "x86_64-pc-windows-msvc" | "x86_64-pc-windows-gnu" => "HiGHS.v1.11.0.x86_64-w64-mingw32-cxx11.tar.gz",
+        "i686-pc-windows-msvc" | "i686-pc-windows-gnu" => "HiGHS.v1.11.0.i686-w64-mingw32-cxx11.tar.gz",
+        "armv7-unknown-linux-gnueabihf" => "HiGHS.v1.11.0.armv7l-linux-gnueabihf-cxx11.tar.gz",
+        "arm-unknown-linux-gnueabihf" => "HiGHS.v1.11.0.armv6l-linux-gnueabihf-cxx11.tar.gz",
         _ => {
             // Default to x86_64-linux-gnu if no specific match
             eprintln!("cargo:warning=Unsupported target '{}', defaulting to x86_64-linux-gnu", target);
