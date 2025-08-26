@@ -148,7 +148,8 @@ fn main() {
             feature = "libz",
             feature = "ninja"
         ),
-        not(feature = "build")
+        not(feature = "build"),
+        not(feature = "bundled"),
     )) {
         panic!("You have enabled features that control how HiGHS is built, but have not enabled the 'build' feature.\n\
                Thus, your features will never have any effect. Please enable the 'build' feature on highs-sys if you want to build HiGHS or disable the 'libz', 'ninja' and 'highs_release' features.");
